@@ -68,6 +68,134 @@ namespace Caluminous.Number
         }
         #endregion
 
+        #region Cast
+        /// <summary>
+        /// <see cref="double"/>型の数値を<see cref="Huge"/>型に変換します。
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(double value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(float value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static explicit operator Huge(decimal value)
+        {
+            return new((double)value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(long value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(ulong value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(int value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(uint value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(short value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(ushort value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(byte value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static implicit operator Huge(sbyte value)
+        {
+            return new(value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static explicit operator Huge(Half value)
+        {
+            return new((double)value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static explicit operator Huge(Int128 value)
+        {
+            return new((double)value, 0);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static explicit operator Huge(UInt128 value)
+        {
+            return new(((double)value), 0);
+        }
+        #endregion
+
         #region ToString
         /// <summary>
         /// この指数表記で表された数を文字列として返します。
