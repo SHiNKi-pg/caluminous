@@ -67,5 +67,39 @@ namespace Caluminous.Number
             Exponent = tmp_exponent;
         }
         #endregion
+
+        #region ToString
+        /// <summary>
+        /// この指数表記で表された数を文字列として返します。
+        /// </summary>
+        /// <param name="significantDigits">小数点以下の表示桁数</param>
+        /// <param name="eNotationChar">E表記で使用されるEの部分の文字</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public string ToString(int significantDigits, char eNotationChar)
+        {
+            if (significantDigits < 0)
+                throw new ArgumentException("小数点以下の表示桁数は 0以上でなければなりません。", nameof(significantDigits));
+
+            StringBuilder sb = new();
+            sb.Append(Mantissa.ToString($"F{significantDigits}"));
+            sb.Append(eNotationChar);
+            if(Exponent >= 0)
+            {
+                sb.Append("+");
+            }
+            sb.Append(Exponent.ToString("000"));
+            return sb.ToString();
+        }
+
+        /// <summary>
+        /// この指数表記で表された数を文字列として返します。
+        /// </summary>
+        /// <returns>小数点以下6桁で表示された文字列</returns>
+        public override string ToString()
+        {
+            return this.ToString(6, 'E');
+        }
+        #endregion
     }
 }
