@@ -158,6 +158,8 @@ namespace Caluminous.Number
             Radix = BASE;
             AdditiveIdentity = Zero;
             MultiplicativeIdentity = One;
+            MaxValue = new(9.9999999, long.MaxValue);
+            MinValue = new(-9.9999999, long.MaxValue);
         }
         #endregion
 
