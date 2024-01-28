@@ -62,6 +62,16 @@ namespace Caluminous.Number
         /// 元の数に掛けても値が変わらない数、つまり 1を表します。
         /// </summary>
         public static Huge MultiplicativeIdentity { get; }
+
+        /// <summary>
+        /// <see cref="Huge"/>型で表すことができる最大の数を取得します。
+        /// </summary>
+        public static Huge MaxValue { get; }
+
+        /// <summary>
+        /// <see cref="Huge"/>型で表すことができる最小の数を取得します。
+        /// </summary>
+        public static Huge MinValue { get; }
         #endregion
 
         #region Constructor
