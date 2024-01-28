@@ -50,8 +50,8 @@ namespace Caluminous.Number
             long tmp_exponent = exponent;
             if (tmp_mantissa != 0)
             {
-                // 仮数部の絶対値が10より大きい場合は10未満になるまで割り続ける
-                while (Math.Abs(tmp_mantissa) > BASE)
+                // 仮数部の絶対値が10以上の場合は10未満になるまで割り続ける
+                while (Math.Abs(tmp_mantissa) >= BASE)
                 {
                     tmp_mantissa /= BASE;
                     tmp_exponent++;
